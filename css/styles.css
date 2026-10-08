@@ -810,3 +810,119 @@ h3 {
 .custom-rates a:focus-visible {
   color: var(--ink);
 }
+
+
+/* ==========================================
+   18. REUSABLE CONTACT / BOOKING CARD
+   ========================================== */
+
+.contact-intro {
+  max-width: 600px;
+  margin: 0 auto 2rem;
+}
+
+.contact-card {
+  width: 100%;
+  margin: 2.25rem auto 0;
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: 1.2rem;
+  box-shadow: 0 18px 48px rgba(41, 32, 82, 0.09);
+  text-align: left;
+}
+
+.contact-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  gap: 0.4rem;
+}
+
+.form-field-wide {
+  grid-column: 1 / -1;
+}
+
+.form-field label {
+  color: var(--ink);
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+.field-optional {
+  color: var(--muted);
+  font-size: 0.76rem;
+  font-weight: 400;
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+  width: 100%;
+  min-width: 0;
+  padding: 0.8rem 0.9rem;
+  border: 1px solid #cbc7d8;
+  border-radius: 0.6rem;
+  background: #fff;
+  color: var(--ink);
+  font: inherit;
+  font-size: 0.94rem;
+}
+
+.form-field textarea {
+  resize: vertical;
+}
+
+.form-field input:focus-visible,
+.form-field select:focus-visible,
+.form-field textarea:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 2px;
+}
+
+.contact-form-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.form-note {
+  flex: 1 1 210px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+.contact-submit {
+  border: 0;
+  border-radius: 999px;
+  padding: 0.9rem 1.35rem;
+  background: var(--ink);
+  color: #fff;
+  font-weight: 600;
+}
+
+.contact-submit:disabled {
+  opacity: 0.58;
+  cursor: not-allowed;
+}
+
+@media (max-width: 600px) {
+  .contact-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-form-footer,
+  .contact-submit {
+    width: 100%;
+  }
+}
