@@ -5,7 +5,7 @@
    ========================================== */
 
 /* Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Montserrat:wght@500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap');
 
 
 /* ==========================================
@@ -13,12 +13,12 @@
    ========================================== */
 
 :root {
-  --ink: #292347;
-  --muted: #625d76;
-  --purple: #554779;
-  --blue: #4779a8;
-  --cream: #fcfaf8;
-  --line: #ded9e6;
+  --ink: #292052;
+  --muted: #59566d;
+  --purple: #292052;
+  --blue: #3975bd;
+  --cream: #ffffff;
+  --line: #dddce6;
 }
 
 
@@ -38,7 +38,7 @@ body {
   margin: 0;
   background: var(--cream);
   color: var(--ink);
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 16px;
   line-height: 1.65;
 }
@@ -55,7 +55,7 @@ button {
 h1,
 h2,
 h3 {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: 'Berkshire Swash', Georgia, serif;
   line-height: 1.18;
 }
 
@@ -113,15 +113,15 @@ p {
 
 .brand {
   text-decoration: none;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Berkshire Swash', Georgia, serif;
   font-size: 1.4rem;
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .brand span {
   display: block;
 
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 0.65rem;
   font-weight: 600;
 
@@ -274,7 +274,7 @@ h1 {
 }
 
 h1 em {
-  color: #594c7f;
+  color: var(--purple);
   font-weight: 500;
 }
 
@@ -679,4 +679,49 @@ footer p {
   .site-header .brand {
     gap: 0.55rem;
   }
+}
+
+
+/* ==========================================
+   16. PAMPHLET-INSPIRED TYPOGRAPHY
+   ========================================== */
+
+/* Ornate title lettering, with readable geometric body text. */
+h1,
+h2,
+.brand-name {
+  font-family: 'Berkshire Swash', Georgia, serif;
+  font-weight: 400;
+  letter-spacing: normal;
+}
+
+h3 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}
+
+.eyebrow,
+.service-card > span,
+.song span {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+}
+
+.brand-name > span {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+
+/* Echo the pamphlet's bright blue section labels. */
+.section h2 {
+  color: var(--blue);
+}
+
+/* Maintain a calm, white-paper presentation below the watercolor. */
+.services {
+  background: #f5f3f9;
+}
+
+.contact {
+  background: linear-gradient(130deg, #e8e4f2, #e7f0f8, #f9ecef);
 }
