@@ -725,3 +725,54 @@ h3 {
 .contact {
   background: linear-gradient(130deg, #e8e4f2, #e7f0f8, #f9ecef);
 }
+
+
+/* ==========================================
+   17. PRESERVE ARTWORK IN LIGHT & DARK BROWSERS
+   ========================================== */
+
+/* Prevent browser auto-darkening from recoloring the artwork. */
+:root {
+  color-scheme: only light;
+}
+
+/* Keep the original watercolor visible without a heavy wash. */
+.hero {
+  background: url("../assets/watercolor.avif") center / cover no-repeat;
+}
+
+.hero-wash {
+  opacity: 0.12;
+}
+
+.hero::after {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 250, 246, 0.78) 0%,
+    rgba(255, 250, 246, 0.40) 33%,
+    rgba(255, 250, 246, 0) 65%
+  );
+}
+
+.music-staff {
+  opacity: 0.46;
+}
+
+/* The original indigo line-art stays legible on a light badge. */
+.brand-logo {
+  background: #fffdfb;
+  border-radius: 12px;
+  padding: 4px;
+}
+
+/* Respect system dark mode without altering image pixels. */
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: only light;
+  }
+
+  .site-header,
+  .brand-logo {
+    background-color: #fffdfb;
+  }
+}
