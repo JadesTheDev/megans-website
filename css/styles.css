@@ -776,3 +776,37 @@ h3 {
     background-color: #fffdfb;
   }
 }
+
+
+/* ==========================================
+   17. CUSTOM RATES & BOOKING
+   ========================================== */
+
+.custom-rates {
+  max-width: 680px;
+  margin: 3.5rem auto 0;
+  text-align: center;
+}
+
+.custom-rates h3 {
+  margin-bottom: 1rem;
+  color: var(--ink);
+  font-family: 'Berkshire Swash', Georgia, serif;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 400;
+}
+
+.custom-rates p {
+  color: var(--muted);
+}
+
+.custom-rates a {
+  color: var(--blue);
+  font-weight: 700;
+  text-underline-offset: 0.2em;
+}
+
+.custom-rates a:hover,
+.custom-rates a:focus-visible {
+  color: var(--ink);
+}
