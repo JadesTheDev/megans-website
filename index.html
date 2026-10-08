@@ -428,19 +428,73 @@
 
         <h2>Let's make something beautiful.</h2>
 
-        <p>
-          Interested in live harp music?
-          Contact details and an inquiry form
-          will appear here once confirmed.
+        <p class="contact-intro">
+          Tell me a little about your event, and let's explore
+          how live harp music can make it special.
         </p>
 
-        <p class="note">
-          Booking form coming soon —
-          not yet accepting submissions
-          through this website.
-        </p>
+        <!-- Replace the placeholder action with Megan's Formspree endpoint
+             and remove disabled from the button when ready to go live. -->
+        <form class="contact-card" action="#" method="POST" aria-label="Booking inquiry">
+          <div class="contact-form-grid">
+            <div class="form-field">
+              <label for="inquiry-name">Your Name <span aria-hidden="true">*</span></label>
+              <input id="inquiry-name" name="name" type="text" autocomplete="name" required>
+            </div>
 
-        <!-- Formspree integration goes here -->
+            <div class="form-field">
+              <label for="inquiry-email">Email Address <span aria-hidden="true">*</span></label>
+              <input id="inquiry-email" name="email" type="email" autocomplete="email" required>
+            </div>
+
+            <div class="form-field">
+              <label for="inquiry-phone">Phone Number <span class="field-optional">(optional)</span></label>
+              <input id="inquiry-phone" name="phone" type="tel" autocomplete="tel">
+            </div>
+
+            <div class="form-field">
+              <label for="inquiry-event-type">Event Type <span aria-hidden="true">*</span></label>
+              <select id="inquiry-event-type" name="event_type" required>
+                <option value="" selected disabled>Select an occasion</option>
+                <option value="Wedding or ceremony">Wedding or Ceremony</option>
+                <option value="Private gathering">Private Gathering</option>
+                <option value="Special event">Special Event</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+
+            <div class="form-field">
+              <label for="inquiry-date">Event Date <span class="field-optional">(if known)</span></label>
+              <input id="inquiry-date" name="event_date" type="date">
+            </div>
+
+            <div class="form-field">
+              <label for="inquiry-duration">Estimated Performance Duration</label>
+              <select id="inquiry-duration" name="duration">
+                <option value="" selected>Not sure yet</option>
+                <option value="Under 1 hour">Under 1 hour</option>
+                <option value="1–2 hours">1–2 hours</option>
+                <option value="2–3 hours">2–3 hours</option>
+                <option value="3+ hours">3+ hours</option>
+              </select>
+            </div>
+
+            <div class="form-field form-field-wide">
+              <label for="inquiry-location">Event Location <span class="field-optional">(venue, city, or area)</span></label>
+              <input id="inquiry-location" name="location" type="text" placeholder="Where will the event take place?">
+            </div>
+
+            <div class="form-field form-field-wide">
+              <label for="inquiry-message">Tell Me About Your Event <span aria-hidden="true">*</span></label>
+              <textarea id="inquiry-message" name="message" rows="5" placeholder="Share your vision, favorite songs, special requests, or any questions." required></textarea>
+            </div>
+          </div>
+
+          <div class="contact-form-footer">
+            <p class="form-note">Fields marked * are required. Booking inquiries will open soon.</p>
+            <button class="contact-submit" type="submit" disabled>Send Inquiry — Coming Soon</button>
+          </div>
+        </form>
 
       </div>
 
