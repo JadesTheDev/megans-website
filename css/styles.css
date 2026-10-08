@@ -527,6 +527,21 @@ footer p {
   margin: 0;
 }
 
+/* Developer Portfolio Link */
+
+.site-credit a {
+  color: #c9b6f0;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.site-credit a:hover,
+.site-credit a:focus-visible {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
 
 /* ==========================================
    12. ANIMATIONS
