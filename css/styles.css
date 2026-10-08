@@ -1,2 +1,627 @@
+
+/* ==========================================
+   DODSON HARP STUDIO
+   Main Stylesheet
+   ========================================== */
+
+/* Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap');
-:root{--ink:#292347;--muted:#625d76;--purple:#554779;--blue:#4779a8;--cream:#fcfaf8;--line:#ded9e6}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font:16px/1.65 'DM Sans',sans-serif}a{color:inherit}button{font:inherit;cursor:pointer}h1,h2,h3{font-family:'Playfair Display',Georgia,serif;line-height:1.18}h2{font-size:clamp(2.2rem,5vw,3.7rem);margin:.25rem 0 1.25rem}h3{font-size:1.45rem;margin:.7rem 0}p{margin:.6rem 0 1.2rem}.skip-link{position:absolute;left:-999px;top:0;z-index:99;background:white;padding:1rem}.skip-link:focus{left:0}.site-header{position:relative;z-index:10;display:flex;justify-content:space-between;align-items:center;gap:2rem;padding:1rem clamp(1.5rem,6vw,6rem);background:#fffdfbec;border-bottom:1px solid #e7e0eb}.brand{text-decoration:none;font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:600}.brand span{display:block;font:600 .65rem 'DM Sans',sans-serif;letter-spacing:.23em;text-transform:uppercase;color:var(--blue)}nav{display:flex;gap:clamp(1rem,3vw,2.5rem)}nav a{text-decoration:none;font-size:.9rem;font-weight:600}nav a:hover,nav a:focus-visible{color:var(--blue)}.menu-toggle{display:none;background:transparent;border:1px solid var(--line);padding:.5rem .8rem;border-radius:.4rem}.hero{position:relative;min-height:650px;display:grid;align-items:center;overflow:hidden;background:linear-gradient(122deg,#6c9ec0 0%,#bba4ce 28%,#f2b6a8 49%,#9ac3d8 74%,#4e83ac 100%)}.hero-wash{position:absolute;inset:0;background:radial-gradient(ellipse at 25% 20%,#fff2e3b0,transparent 43%),radial-gradient(ellipse at 77% 75%,#224d8a70,transparent 55%),radial-gradient(ellipse at 42% 68%,#ba6f9e77,transparent 42%);filter:blur(30px);animation:wash 17s ease-in-out infinite alternate}.music-staff{position:absolute;inset:0;width:100%;height:100%;opacity:.34;pointer-events:none}.hero:after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,#fff9f2d9 0%,#fffaf1a8 44%,transparent 100%);pointer-events:none}.hero-content{position:relative;z-index:2;width:min(760px,90%);margin-left:clamp(1.5rem,9vw,9rem);padding:6rem 0}.eyebrow{font-size:.72rem;letter-spacing:.24em;font-weight:700;color:var(--blue)}h1{font-size:clamp(3rem,7vw,6.5rem);letter-spacing:-.035em;margin:1.1rem 0 1.4rem}h1 em{color:#594c7f;font-weight:500}.hero-content>p:not(.eyebrow){font-size:1.15rem;max-width:500px}.button{display:inline-flex;gap:1.4rem;align-items:center;background:var(--ink);color:white;text-decoration:none;padding:.95rem 1.45rem;border-radius:2rem;font-weight:600;margin-top:1rem}.button:hover{background:#4b4074}.section{padding:clamp(4.5rem,9vw,8rem) 1.5rem}.section-inner{max-width:1120px;margin:auto}.split{display:grid;grid-template-columns:1.2fr .8fr;gap:clamp(2rem,8vw,7rem);align-items:center}.about p:not(.eyebrow){max-width:620px}.portrait-placeholder{min-height:360px;background:linear-gradient(145deg,#d6cce4,#a9c4da,#f0c5c1);display:flex;flex-direction:column;align-items:center;justify-content:center;border-radius:48% 48% 4px 4px;color:#4b4271}.portrait-placeholder span{font-size:5rem}.note{font-size:.85rem;color:var(--muted);font-style:italic}.services{background:#f0edf4}.intro{max-width:690px;color:var(--muted)}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-top:2.5rem}.service-card{background:#fff;padding:2rem;border:1px solid #e5dfeb;border-radius:1rem;box-shadow:0 10px 35px #29234708}.service-card>span{color:var(--blue);font-size:.8rem;font-weight:700;letter-spacing:.15em}.service-card p{color:var(--muted)}.filters{display:flex;flex-wrap:wrap;gap:.6rem;margin:2rem 0}.filters button{border:1px solid #c8c0d7;background:transparent;color:var(--ink);border-radius:30px;padding:.55rem 1.15rem}.filters button.active,.filters button:hover{background:var(--ink);color:white}.song-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}.song{border:1px solid var(--line);padding:1.4rem 1.6rem;border-radius:.7rem;background:white}.song[hidden]{display:none}.song span{text-transform:uppercase;letter-spacing:.18em;color:var(--blue);font-size:.65rem;font-weight:700}.song h3{margin:.4rem 0}.song p{color:var(--muted);margin:0}.contact{text-align:center;background:linear-gradient(130deg,#e8e2f1,#e0edf2,#f5e5e2)}.contact-inner{max-width:700px}footer{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;padding:1.5rem clamp(1.5rem,6vw,6rem);background:var(--ink);color:#eee8f8;font-size:.82rem}footer p{margin:0}@keyframes wash{to{transform:scale(1.15) translate(2%,-3%)}}@media(max-width:700px){.menu-toggle{display:block}nav{display:none;position:absolute;top:100%;left:0;right:0;background:white;flex-direction:column;padding:1.5rem;box-shadow:0 12px 20px #29234720}nav.open{display:flex}.hero{min-height:560px}.hero-content{margin-left:1.5rem;width:calc(100% - 3rem)}.hero:after{background:#fff9f2a8}.split,.cards,.song-grid{grid-template-columns:1fr}.portrait-placeholder{min-height:290px}}@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;scroll-behavior:auto!important}}
+
+
+/* ==========================================
+   1. COLOR PALETTE
+   ========================================== */
+
+:root {
+  --ink: #292347;
+  --muted: #625d76;
+  --purple: #554779;
+  --blue: #4779a8;
+  --cream: #fcfaf8;
+  --line: #ded9e6;
+}
+
+
+/* ==========================================
+   2. GLOBAL STYLES
+   ========================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--ink);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Playfair Display', Georgia, serif;
+  line-height: 1.18;
+}
+
+h2 {
+  font-size: clamp(2.2rem, 5vw, 3.7rem);
+  margin: 0.25rem 0 1.25rem;
+}
+
+h3 {
+  font-size: 1.45rem;
+  margin: 0.7rem 0;
+}
+
+p {
+  margin: 0.6rem 0 1.2rem;
+}
+
+
+/* ==========================================
+   3. ACCESSIBILITY
+   ========================================== */
+
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: 0;
+  z-index: 99;
+  background: white;
+  padding: 1rem;
+}
+
+.skip-link:focus {
+  left: 0;
+}
+
+
+/* ==========================================
+   4. HEADER & NAVIGATION
+   ========================================== */
+
+.site-header {
+  position: relative;
+  z-index: 10;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+
+  padding: 1rem clamp(1.5rem, 6vw, 6rem);
+
+  background: #fffdfbec;
+  border-bottom: 1px solid #e7e0eb;
+}
+
+.brand {
+  text-decoration: none;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.brand span {
+  display: block;
+
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 600;
+
+  letter-spacing: 0.23em;
+  text-transform: uppercase;
+  color: var(--blue);
+}
+
+nav {
+  display: flex;
+  gap: clamp(1rem, 3vw, 2.5rem);
+}
+
+nav a {
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+nav a:hover,
+nav a:focus-visible {
+  color: var(--blue);
+}
+
+.menu-toggle {
+  display: none;
+
+  background: transparent;
+  border: 1px solid var(--line);
+  border-radius: 0.4rem;
+
+  padding: 0.5rem 0.8rem;
+}
+
+
+/* ==========================================
+   5. HERO SECTION
+   ========================================== */
+
+.hero {
+  position: relative;
+
+  min-height: 650px;
+
+  display: grid;
+  align-items: center;
+
+  overflow: hidden;
+
+  /* Megan's watercolor background */
+  background:
+    linear-gradient(
+      90deg,
+      rgba(255, 250, 245, 0.55),
+      rgba(255, 250, 245, 0.08)
+    ),
+    url("../assets/watercolor.avif") center / cover no-repeat;
+}
+
+
+/* Animated watercolor lighting */
+
+.hero-wash {
+  position: absolute;
+  inset: 0;
+
+  background:
+    radial-gradient(
+      ellipse at 25% 20%,
+      #fff2e3b0,
+      transparent 43%
+    ),
+    radial-gradient(
+      ellipse at 77% 75%,
+      #224d8a70,
+      transparent 55%
+    ),
+    radial-gradient(
+      ellipse at 42% 68%,
+      #ba6f9e77,
+      transparent 42%
+    );
+
+  filter: blur(30px);
+
+  animation: wash 17s ease-in-out infinite alternate;
+
+  pointer-events: none;
+}
+
+
+/* Animated musical staff overlay */
+
+.music-staff {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  opacity: 0.34;
+  pointer-events: none;
+}
+
+
+/* Readability overlay */
+
+.hero::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    90deg,
+    #fff9f2d9 0%,
+    #fffaf1a8 44%,
+    transparent 100%
+  );
+
+  pointer-events: none;
+}
+
+
+/* Hero text */
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+
+  width: min(760px, 90%);
+
+  margin-left: clamp(1.5rem, 9vw, 9rem);
+  padding: 6rem 0;
+}
+
+.eyebrow {
+  font-size: 0.72rem;
+  letter-spacing: 0.24em;
+  font-weight: 700;
+
+  color: var(--blue);
+}
+
+h1 {
+  font-size: clamp(3rem, 7vw, 6.5rem);
+  letter-spacing: -0.035em;
+
+  margin: 1.1rem 0 1.4rem;
+}
+
+h1 em {
+  color: #594c7f;
+  font-weight: 500;
+}
+
+.hero-content > p:not(.eyebrow) {
+  font-size: 1.15rem;
+  max-width: 500px;
+}
+
+
+/* Hero button */
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  gap: 1.4rem;
+
+  margin-top: 1rem;
+  padding: 0.95rem 1.45rem;
+
+  background: var(--ink);
+  color: white;
+
+  border-radius: 2rem;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.button:hover {
+  background: #4b4074;
+}
+
+
+/* ==========================================
+   6. SHARED SECTION STYLES
+   ========================================== */
+
+.section {
+  padding: clamp(4.5rem, 9vw, 8rem) 1.5rem;
+}
+
+.section-inner {
+  max-width: 1120px;
+  margin: auto;
+}
+
+.intro {
+  max-width: 690px;
+  color: var(--muted);
+}
+
+.note {
+  font-size: 0.85rem;
+  color: var(--muted);
+  font-style: italic;
+}
+
+
+/* ==========================================
+   7. ABOUT MEGAN
+   ========================================== */
+
+.split {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: clamp(2rem, 8vw, 7rem);
+
+  align-items: center;
+}
+
+.about p:not(.eyebrow) {
+  max-width: 620px;
+}
+
+
+/* Temporary portrait placeholder */
+
+.portrait-placeholder {
+  min-height: 360px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background: linear-gradient(
+    145deg,
+    #d6cce4,
+    #a9c4da,
+    #f0c5c1
+  );
+
+  border-radius: 48% 48% 4px 4px;
+  color: #4b4271;
+}
+
+.portrait-placeholder span {
+  font-size: 5rem;
+}
+
+
+/* ==========================================
+   8. SERVICES
+   ========================================== */
+
+.services {
+  background: #f0edf4;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+
+  margin-top: 2.5rem;
+}
+
+.service-card {
+  padding: 2rem;
+
+  background: white;
+  border: 1px solid #e5dfeb;
+  border-radius: 1rem;
+
+  box-shadow: 0 10px 35px #29234708;
+}
+
+.service-card > span {
+  color: var(--blue);
+
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+}
+
+.service-card p {
+  color: var(--muted);
+}
+
+
+/* ==========================================
+   9. FEATURED REPERTOIRE
+   ========================================== */
+
+/* Genre filter buttons */
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+
+  margin: 2rem 0;
+}
+
+.filters button {
+  padding: 0.55rem 1.15rem;
+
+  background: transparent;
+  color: var(--ink);
+
+  border: 1px solid #c8c0d7;
+  border-radius: 30px;
+}
+
+.filters button.active,
+.filters button:hover {
+  background: var(--ink);
+  color: white;
+}
+
+
+/* Song grid */
+
+.song-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.song {
+  padding: 1.4rem 1.6rem;
+
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 0.7rem;
+}
+
+.song[hidden] {
+  display: none;
+}
+
+.song span {
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+
+  color: var(--blue);
+
+  font-size: 0.65rem;
+  font-weight: 700;
+}
+
+.song h3 {
+  margin: 0.4rem 0;
+}
+
+.song p {
+  color: var(--muted);
+  margin: 0;
+}
+
+
+/* ==========================================
+   10. CONTACT SECTION
+   ========================================== */
+
+.contact {
+  text-align: center;
+
+  background: linear-gradient(
+    130deg,
+    #e8e2f1,
+    #e0edf2,
+    #f5e5e2
+  );
+}
+
+.contact-inner {
+  max-width: 700px;
+}
+
+
+/* ==========================================
+   11. FOOTER
+   ========================================== */
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+
+  padding: 1.5rem clamp(1.5rem, 6vw, 6rem);
+
+  background: var(--ink);
+  color: #eee8f8;
+
+  font-size: 0.82rem;
+}
+
+footer p {
+  margin: 0;
+}
+
+
+/* ==========================================
+   12. ANIMATIONS
+   ========================================== */
+
+/* Slow watercolor lighting movement */
+
+@keyframes wash {
+  to {
+    transform: scale(1.15) translate(2%, -3%);
+  }
+}
+
+/*
+  Musical staff movement is handled by
+  js/script.js, not CSS.
+*/
+
+
+/* ==========================================
+   13. MOBILE RESPONSIVENESS
+   ========================================== */
+
+@media (max-width: 700px) {
+
+  /* Navigation */
+
+  .menu-toggle {
+    display: block;
+  }
+
+  nav {
+    display: none;
+
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+
+    flex-direction: column;
+
+    padding: 1.5rem;
+
+    background: white;
+
+    box-shadow: 0 12px 20px #29234720;
+  }
+
+  nav.open {
+    display: flex;
+  }
+
+
+  /* Hero */
+
+  .hero {
+    min-height: 560px;
+  }
+
+  .hero-content {
+    margin-left: 1.5rem;
+    width: calc(100% - 3rem);
+  }
+
+  .hero::after {
+    background: #fff9f2a8;
+  }
+
+
+  /* Content */
+
+  .split,
+  .cards,
+  .song-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .portrait-placeholder {
+    min-height: 290px;
+  }
+
+}
+
+
+/* ==========================================
+   14. REDUCED MOTION ACCESSIBILITY
+   ========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+}
